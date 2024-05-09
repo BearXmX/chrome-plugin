@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chrome extention</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 450px;
+        padding: 16px;
+      }
+
+      .container > div {
+        margin-bottom: 16px;
+      }
+
+      .input {
+        width: 370px;
+        height: 30px;
+        outline: none;
+      }
+
+      .show-content {
+        padding-top: 16px;
+      }
+
+      .btn {
+        line-height: 30px;
+        background-color: #00b96b;
+        color: #fff;
+        text-align: center;
+        height: 30px;
+        border-radius: 6px;
+        margin-bottom: 16px;
+        padding: 0 12px;
+        max-width: 160px;
+        cursor: pointer;
+      }
+
+      .web-image-container .web-image-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 0px;
+      }
+
+      .web-image-container .web-image-content img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+      }
+
+      .oss-container .oss-setting .oss-host-input {
+        margin-right: 8px;
+      }
+
+      .oss-container .oss-content {
+        word-break: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="web-image-container">
+        <div class="search-btn btn">获取当前网页所有图片</div>
+        <div class="web-image-content show-content"></div>
+      </div>
+
+      <div class="oss-container">
+        <div class="oss-btn btn">获取oss bucket 资源列表</div>
+        <div class="oss-setting">
+          <input type="text" placeholder="请输入oss bucket host" class="oss-host-input input" style="width: 270px" />
+          <input type="checkbox" class="oss-host-checkbox" /><span style="vertical-align: baseline">&nbsp;导出json文件</span>
+        </div>
+        <div class="oss-content show-content"></div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
